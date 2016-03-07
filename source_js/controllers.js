@@ -1,37 +1,32 @@
-app.controller('ListController', function($scope, $http) {
-  $scope.orderProp = "title";
+// list controller
+app.controller('ListController', ['$scope', '$http', function($scope, $http) {
+  $scope.orderOption = "rank";
   $scope.sortOptions = ["title", "rank"];
 	$scope.currOption = "";
+  $scope.isReverse = false;
 
   // get the list of movies from the JSON
   $http.get("data/imdb250.json").then(function(response) {
     $scope.movieList = response.data;
   });
+}]);
 
-  // find the listed titles by the search string
-  // $scope.movieFilter = function(movie) {
-  //   return function(movie) {
-  //     if ($scope.movieSearch === null) {
-  //       return false;
-  //     }
-  //     return movie.title.search($scope.movieSearch) != -1
-  //   };
-  // };
-});
-
-app.controller('DetailsController', function($scope, $http, $routeParams) {
+// details controller
+app.controller('DetailsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
   $scope.currMovie = $routeParams.imdbID;
 
   // get the list of movies from the JSON
   $http.get("data/imdb250.json").then(function(response) {
     $scope.movieList = response.data;
   });
-});
+}]);
 
-app.controller('GalleryController', function($scope, $http) {
+// gallery controller
+app.controller('GalleryController', ['$scope', '$http', function($scope, $http) {
+  $scope.currGenre = '';
 
   // get the list of movies from the JSON
   $http.get("data/imdb250.json").then(function(response) {
     $scope.movieList = response.data;
   });
-});
+}]);

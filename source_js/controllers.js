@@ -1,5 +1,5 @@
 app.controller('ListController', function($scope, $http) {
-  // $scope.movieSearch= "Search for movies";
+  $scope.orderProp = "title";
   $scope.sortOptions = ["title", "rank"];
 	$scope.currOption = "";
 

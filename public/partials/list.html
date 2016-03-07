@@ -1,0 +1,26 @@
+<div ng-app="mp3" ng-controller="ListController" id="list">
+
+  <div class="small-6 small-centered columns">
+    <input class="text-left" type="text" ng-model="movieSearch" placeholder="Search for movies...">
+    Sort by:
+    <select ng-model="orderProp">
+      <option value="title" selected>Title</option>
+      <option value="rank">Rank</option>
+    </select>
+
+    <input class="text-left" type="radio" name="sort" checked="checked" ng-click="isReverse = false">Ascending
+    <input class="text-left" type="radio" name="sort" ng-click="isReverse = true">Descending
+
+    <ul>
+      <li ng-repeat="movie in movieList | filter:movieSearch | orderBy:orderProp:isReverse">
+        <a ng-href="#/Details/{{movie.imdbID}}">
+          <div class="row">
+            <div class="small-12 large-3 text-center columns"><img ng-src="./data/images/{{movie.imdbID}}.jpg"></div>
+            <div class="small-12 large-9 text-left columns"><h4>{{movie.title}}</h4><h5>Rank: {{movie.rank}}</h5></div>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>

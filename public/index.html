@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>MP3 Starter</title>
+    <title>MP3 Cameron Vander Wal</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
     <!-- Angular Scripts -->
     <!-- NOTE: removing the ".min." can help debugging in the console-->
@@ -18,19 +19,13 @@
 
 <body ng-app="mp3">
 
-    <!-- <div ng-view></div> -->
-
-    <!-- DELETE following div and UNCOMMENT the previous one -->
-    <div class="text-center">
-        <h1>Welcome to MP3!</h1>
-        <img src="http://lorempixel.com/400/200/cats"/>
-        <p> The installation and setup worked out for you. That is commendable.
-            To reward you for your efforts, here is a picture of a cat. However,
-            this is not the page you want. To get started on using your partials,
-            delete this particular div and, instead, uncomment the div given
-            in your index.html and implement your Angular routes in source_js/app.js .
-        </p>
+    <div class="row text-center" id="main">
+      <h1>IMDB Top 250 Movie Directory</h1>
+      <div class="small-4 text-center columns"><a ng-href="#/List"><h2>Search</h2></a></div>
+      <div class="small-4 text-center columns"><a ng-href="#/Gallery"><h2>Gallery</h2></a></div>
     </div>
+
+    <div ng-view></div>
 
     <!-- Scripts -->
     <script src="./lib/jquery-2.1.3.min/index.js"></script>

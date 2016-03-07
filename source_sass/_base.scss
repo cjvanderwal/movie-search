@@ -1,1 +1,66 @@
-// Add any custom Sass & CSS here
+// styles consistent through all 3 webpages
+*{font-family: 'Lato', sans-serif};
+h1,h4 {
+  color: $text-primary;
+}
+h2,h5 {
+  color: $text-secondary;
+}
+
+// styles for the 'list' webpage
+#list {
+  img {
+    width: 100px;
+    height: 140px;
+    margin: $margin-standard;
+    border-radius: $border-standard;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .row {
+    background-color: $background-color;
+    border-radius: $border-standard;
+    margin-bottom: 5px;
+  }
+}
+
+// styles for the 'details' webpage
+#details {
+  img {
+    width: 214px;
+    height: 300px;
+    margin: 10px;
+    border-radius: $border-standard;
+  }
+  .column {
+    background-color: $background-color;
+    border-radius: $border-standard;
+  }
+  .columns {
+    margin-top: $margin-standard;
+  }
+  .row {
+    margin-bottom: $margin-standard;
+  }
+  #plot {
+    color: $text-primary;
+  }
+  #other-info {
+    color: white;
+  }
+}
+
+// styles for the 'gallery' webpage
+#gallery {
+  img {
+    width: 179px;
+    height: 250px;
+    margin: $margin-standard;
+    border-radius: $border-standard;
+  }
+  #movie-gallery {
+    background-color: $background-color;
+    border-radius: $border-standard;
+  }
+}

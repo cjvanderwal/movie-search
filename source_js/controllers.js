@@ -6,7 +6,7 @@ app.controller('ListController', ['$scope', '$http', function($scope, $http) {
   $scope.isReverse = false;
 
   // get the list of movies from the JSON
-  $http.get("data/imdb250.json").then(function(response) {
+  $http.get("./data/imdb250.json").then(function(response) {
     $scope.movieList = response.data;
   });
 }]);
@@ -16,7 +16,7 @@ app.controller('DetailsController', ['$scope', '$http', '$routeParams', function
   $scope.currMovie = $routeParams.imdbID;
 
   // get the list of movies from the JSON
-  $http.get("data/imdb250.json").then(function(response) {
+  $http.get("./data/imdb250.json").then(function(response) {
     $scope.movieList = response.data;
   });
 }]);
@@ -26,7 +26,7 @@ app.controller('GalleryController', ['$scope', '$http', function($scope, $http) 
   $scope.currGenre = '';
 
   // get the list of movies from the JSON
-  $http.get("data/imdb250.json").then(function(response) {
+  $http.get("./data/imdb250.json").then(function(response) {
     $scope.movieList = response.data;
   });
 }]);
